@@ -12,11 +12,11 @@ models:
       - name: cust_phone
         tests:
           - dbt_expectations.expect_column_values_to_match_regex:
-              regex: "\\d{2}-\\d{3}-\\d{3}-\\d{4}"
+              regex: "\d{2}-\d{3}-\d{3}-\d{4}"
       - name: cust_name
         tests:
           - dbt_expectations.expect_column_values_to_match_regex:
-              regex: "Customer#\\d{9}"
+              regex: "Customer#\d{9}"
 
   - name: stg_tpch_sf1__nation
     description: Nation staging view.
